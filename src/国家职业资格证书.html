@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+<style>
+    #center{
+        margin: 0 auto;
+        text-align: center;
+    }
+    .form {
+        background: url(http://zscx.osta.org.cn/img/zscx/formBg.png) no-repeat;
+        width: 456px;
+        height: 238px;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        vertical-align: top;
+    }
+    input,p {margin:0; padding:0;}
+    input,select{vertical-align:middle;}
+    #search_box1{ /*width:552px; position:relative;*/padding-left: 37px;padding-top: 15px; color:#015293;font-size:14px; }
+    #search_box1 p{margin-bottom:4px; *margin-bottom:4px;font-weight:bold;}
+    #search_box1 p input{ height:26px; line-height:26px; width:299px; border:1px solid #A4D8EC;}
+    #search_box1 .exp{padding-left:75px; color:#808080;font-weight:normal;font-size:14px;line-height:25px;}
+</style>
+<div id="center">
+    <!--职业资格证书-->
+    <form class="form" name="Info" id="Info1" method="post"
+          action="http://zscx.osta.org.cn/jiandingApp/command/buzhongxin/ecCertSearchAll" target="_blank"
+          onsubmit="return checkFormValid1('Info1', 2);">
+        <p style="font-size: 20px;font-weight: 600;color: #015293;padding-left: 14px;padding-top: 20px;display: inline-block;">
+            国家职业资格证书</p>
+        <input type="hidden" value="CERT_T" name="tableName">
+        <input type="hidden" value="000000" name="tableName1">
+
+        <div id="search_box1">
+
+            <p><label for="CertificateID" style="font-size: 16px">证书编号：</label><input type="text" id="CertificateID"
+                                                                                      name="CertificateID" value=""
+                                                                                      valid="valid"></p>
+            <p><label for="CID" style="font-size: 16px">证件号码：</label><input type="text" id="CID" name="CID" value=""
+                                                                            valid="valid"></p>
+            <!--  <p><label for="PortID">准考证号：</label><input type="text" id="PortID" name="PortID" value="" valid="valid" /></p> -->
+            <p><label for="Name" style="font-size: 16px">姓　　名：</label><input type="text" id="Name" name="Name" value=""
+                                                                             valid="valid"></p>
+            <p class="exp" style="padding-left: 85px">注：以上三项输入任意两项即可查询。</p>
+            <span style=" float:left; margin-left:80px; "><input type="image" id="bt1"
+                                                                 src="http://zscx.osta.org.cn/img/zscx/btn_search.jpg"></span>
+
+            <p style="visibility:hidden;"><label for="province">地　　区：</label><select id="province" name="province">
+                <option value="-1">自动检测</option>
+            </select></p>
+        </div>
+    </form>
+</div>
+    <sctipt>
+        <script type="text/javascript">
+            /*
+            验证表单，至少输入*个查询条件；
+            strFormId为表单Id，nMinValid为需要的条件个数；
+            在有效标签加入valid="valid"属性。
+            */
+            function checkFormValid(strFormId, nMinValid)
+            {
+
+                var objForm = document.getElementById(strFormId);
+                var arrayFormChilds = objForm.getElementsByTagName("input");
+                var nValid = 0;
+                var certID=document.getElementById('zsbh').value
+
+                for (var n = 0; n < arrayFormChilds.length; n++){
+                    if (arrayFormChilds[n].getAttribute("valid")){
+                        if (arrayFormChilds[n].value.length > 0){
+                            nValid++;
+                        }
+                    }
+                }
+                if(!certID){
+                    window.alert("请填写证书编号！");
+                    return false;
+                }else if
+                (nValid < nMinValid){
+                    window.alert("请至少输入" + nMinValid + "个查询条件！");
+                    return false;
+                }
+//			var regex = /.*csrftoken=([^;.]*).*$/ ;
+//          var xCSRFToken = document.cookie.match(regex) === null ? null : document.cookie.match(regex)[1]
+//          document.getElementById("csrfmiddlewaretoken").value = xCSRFToken;
+//          return true;
+
+            }
+            function checkFormValid1(strFormId, nMinValid)
+            {
+                var objForm = document.getElementById(strFormId);
+                var arrayFormChilds = objForm.getElementsByTagName("input");
+                var nValid = 0;
+
+                for (var n = 0; n < arrayFormChilds.length; n++)
+                {
+                    if (arrayFormChilds[n].getAttribute("valid"))
+                    {
+                        if (arrayFormChilds[n].value.length > 0)
+                        {
+                            nValid++;
+                        }
+                    }
+                }
+
+                if (nValid < nMinValid)
+                {
+                    window.alert("请至少输入" + nMinValid + "个查询条件！");
+                    return false;
+                }
+            }
+            var intervalId = "";
+            var Change = 2;
+            function setTab(name,cursel,n,hreef){
+
+                for(i=1;i<=n;i++){
+                    var menu=document.getElementById(name+i);
+                    var con=document.getElementById("con_"+name+"_"+i);
+                    menu.className=i==cursel?hreef:"";
+                    con.style.display=i==cursel?"block":"none";
+                }
+
+            }
+
+            function setTabChange(name,cursel,n,hreef){
+
+                for(i=1;i<=n;i++){
+                    var menu=document.getElementById(name+i);
+                    var con=document.getElementById("con_"+name+"_"+i);
+                    menu.className=i==cursel?hreef:"";
+                    con.style.display=i==cursel?"block":"none";
+                }
+                //clearInterval(intervalId);
+                //Change=cursel;
+            }
+            function setTabChange1(name,cursel,n,hreef){
+                for(i=1;i<=n;i++){
+                    var menu=document.getElementById(name+i);
+                    var con=document.getElementById(name+"_con_"+i);
+                    menu.className=i==cursel?hreef:"";
+                    con.style.display=i==cursel?"block":"none";
+                }
+            }
+
+            function setTab_s(name,cursel,n){
+                for(i=1;i<=n;i++){
+                    var menu=document.getElementById(name+i);
+                    var con=document.getElementById("con_"+name+"_"+i);
+                    var mone=document.getElementById("con_"+name+"_mone_"+i);
+                    menu.className=i==cursel?"tit_qh tit_qh_dq":"tit_qh";
+                    con.style.display=i==cursel?"block":"none";
+                    mone.style.display=i==cursel?"block":"none";
+                }
+
+            }
+
+            /*
+            function setgunDong(){
+                if(Change==4){
+                    Change=1;
+                }
+                setTab('area',Change,'3','cxsj_hreef_s');
+                Change++;
+                //alert(Change);
+                setIntervas();
+            }
+            function setIntervas(){
+                intervalId = setTimeout("setgunDong()",3000);
+            }
+            window.onload=function()
+            {
+                setIntervas();
+            }
+             */
+        </script>
+    </sctipt>
+</div>
+</body>
+</html>
