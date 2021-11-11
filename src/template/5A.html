@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>旅游名录</title>
+    <link rel="stylesheet" href="https://zwfw.mct.gov.cn/css/global.css">
+    <link rel="stylesheet" type="text/css" href="css/jgjj.css" />
+</head>
+<body>
+<div class="jgjj_container">
+    <div class="jgjj">
+        <div class="" style="margin-bottom: 15px;height: 18px;">
+            <div style="background-color: #9d1515;width: 5px;height: 23px;float: left;list-style-type: none;margin-right: 10px;"></div>
+            <span style="float: left;font-size: 18px;">5A级景区</span>
+        </div>
+        <div class="main1_top">
+            <form id="searchForm" target="_blank" method="get" action="https://zwfw.mct.gov.cn/scenicspot">
+                <span>景区名称</span>
+                <input type="hidden" name="currentPage" value="1" />
+                <input type="text" name="ssName" value="" style="/*width:140px*/">
+                <span>地区</span>
+                <select name="province" style="width:100px; padding: 0 0 0 10px">
+                    <option value="">地区</option>
+
+                    <option value="北京">北京</option>
+
+                    <option value="天津">天津</option>
+
+                    <option value="河北">河北</option>
+
+                    <option value="山西">山西</option>
+
+                    <option value="内蒙古自治区">内蒙古自治区</option>
+
+                    <option value="辽宁">辽宁</option>
+
+                    <option value="吉林">吉林</option>
+
+                    <option value="黑龙江">黑龙江</option>
+
+                    <option value="上海">上海</option>
+
+                    <option value="江苏">江苏</option>
+
+                    <option value="浙江">浙江</option>
+
+                    <option value="安徽">安徽</option>
+
+                    <option value="福建">福建</option>
+
+                    <option value="江西">江西</option>
+
+                    <option value="山东">山东</option>
+
+                    <option value="河南">河南</option>
+
+                    <option value="湖北">湖北</option>
+
+                    <option value="湖南">湖南</option>
+
+                    <option value="广东">广东</option>
+
+                    <option value="广西壮族自治区">广西壮族自治区</option>
+
+                    <option value="海南">海南</option>
+
+                    <option value="重庆">重庆</option>
+
+                    <option value="四川">四川</option>
+
+                    <option value="贵州">贵州</option>
+
+                    <option value="云南">云南</option>
+
+                    <option value="西藏自治区">西藏自治区</option>
+
+                    <option value="陕西">陕西</option>
+
+                    <option value="甘肃">甘肃</option>
+
+                    <option value="青海">青海</option>
+
+                    <option value="宁夏回族自治区">宁夏回族自治区</option>
+
+                    <option value="新疆维吾尔自治区">新疆维吾尔自治区</option>
+
+                </select>
+                <select name="ssYear" style="width:100px; padding: 0 0 0 10px">
+                    <option value="">-评定年度-</option>
+
+                    <option value="2020">2020</option>
+
+                    <option value="2019">2019</option>
+
+                    <option value="2018">2018</option>
+
+                    <option value="2017">2017</option>
+
+                    <option value="2016">2016</option>
+
+                    <option value="2015">2015</option>
+
+                    <option value="2014">2014</option>
+
+                    <option value="2013">2013</option>
+
+                    <option value="2012">2012</option>
+
+                    <option value="2011">2011</option>
+
+                    <option value="2010">2010</option>
+
+                    <option value="2007">2007</option>
+
+                </select>
+                <input type="submit" value="搜索" class="" onclick="searchSubmit()">
+                <div class="clear"></div>
+                <span style="color: #888; padding-left: 410px;">来源：<a href="https://zwfw.mct.gov.cn/scenicspot" target="_blank" style="color: #888;">文化和旅游部政务服务门户</a></span>
+            </form>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

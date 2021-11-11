@@ -1,0 +1,228 @@
+/*背景颜色*/
+/*.jgjj_container {*/
+/*    background: #efefef;;*/
+/*    padding-bottom: 5px;*/
+/*}*/
+
+.jgjj_container .jgjj {
+    width: 680px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 999px) {
+    .jgjj_container .jgjj {
+        width: 100%;
+    }
+}
+
+.dqwz ul li {
+    display: inline-block;
+    padding: 10px 5px 10px 0px;
+}
+
+.dqwz ul li a:hover {
+    color: #ba3523;
+}
+
+/*.jgjj_container .jgjj .section{}*/
+.jgjj_container .jgjj .section .section_left, .jgjj_container .jgjj .section .section_right {
+    float: left;
+    background: #fff;
+}
+
+.jgjj_container .jgjj .section .section_left {
+    width: 25%;
+}
+
+
+.jgjj_container .jgjj .section .section_left ul {
+    width: 207px;
+    padding: 5px 15px;
+    height: auto;
+    overflow: hidden;
+}
+
+.jgjj_container .jgjj .section .section_left ul li {
+    /*margin: 0px 20px;*/
+    /*text-align: center;*/
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.lanmu_On{
+    display: block;
+    width: 100%;
+    height: 46px;
+    line-height: 45px;
+    background: url(/images/13.png) 90% 50% no-repeat #ebebeb;
+    border-bottom: 1px solid #cfcfcf;
+    padding-left: 15px;
+    color: #b92121;
+}
+.lanmu_old{
+    display: block;
+    width: 100%;
+    height: 46px;
+    line-height: 45px;
+    background: url(/images/12.png) 90% 50% no-repeat #fff;
+    border-bottom: 1px solid #cfcfcf;
+    padding-left: 15px;
+    color: #333333;
+}
+
+.jgjj_container .jgjj .section .section_left ul li a:hover {
+    color: #b92121;
+}
+
+.jgjj_container .jgjj .section .section_left ul li img {
+    margin-left: 15px;
+}
+
+.nav_2 {
+    padding: 10px 0px 10px 45px;;
+    background: #ba3523;
+    color: #fff;
+    font-size: 15px;
+    background: url("../images/11.png") repeat-x;
+}
+
+.section_right .right_topic {
+    font-size: 16px;
+    font-weight: bold;
+    width: 193px;
+    border-bottom: 2px solid #b92121;
+    padding-bottom: 12px;
+}
+
+.section_right .right_topic img {
+    margin-right: 10px;
+    margin-top: -2px;
+}
+
+.section_right .right_zt {
+    /* padding-left: 20px; */
+    background: #efefef;
+}
+
+.section_right .fs {
+    background: #fff;
+    padding: 10px 20px;
+    border-top: 2px solid #efefef;
+}
+
+.section_right .right_zt .fs li {
+    border-bottom: #CCC dashed 1px;
+    line-height: 45px;
+    height: 45px;
+    clear: both;
+}
+
+.section_right .right_zt .fs li .mc {
+    float: left;
+    /*width:590px !important;*/
+    width:700px !important;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.section_right .right_zt .fs li .time {
+    float: right;
+    float: right;
+    width: 170px !important;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: right;
+}
+
+.fy {
+    text-align: center;
+    background: #fff;
+    padding: 10px;
+}
+
+.fy ul li {
+    display: inline-block;
+}
+
+.fy ul li input {
+    width: 30px;
+}
+
+
+.section_left .on {
+    background: #ebebeb;
+}
+
+.main1_top{
+    border: 0px solid #a4bcd5;
+    background: #fff;
+    border-top: 3px solid #b92121;
+    padding: 36px 10px;
+    /*margin-top: 20px;*/
+    margin-bottom: 20px;
+    line-height: 36px;
+    /*color: #2d5d8e;*/
+    font-size: 16px;
+}
+.main1_top input, textarea, keygen, select, button {
+    border: 1px solid #a4bcd5;
+    font-style: normal;
+    font-weight: 400;
+    border-radius: 5px;
+    font-size: 11px;
+    font-family: system-ui;
+    font-variant-caps: normal;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    float: left;
+    width: 100px;
+    height: 30px;
+    padding: 0px 10px;
+    margin: 0px 20px;
+}
+.main1_top span{
+    float: left;
+    /* padding-left:30px; */
+}
+.main1_top select {
+    padding: 0 0 0 10px;
+    border: 1px solid #a4bcd5;
+    width: 113px;
+    height: 34px;
+    margin: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+    outline: none;
+    float: left;
+}
+.main1_top input[type='submit'] {
+    border: 1px solid #a4bcd5;
+    width: 74px;
+    line-height: 34px;
+    text-align: center;
+    height: 34px;
+    background: #fff;
+    outline: none;
+    cursor: pointer;
+    color: #2d5d8e;
+    font-size: 16px;
+    font-family: "Microsoft Yahei";
+    float: left;
+    padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .jgjj_container .jgjj .section .section_left, .jgjj_container .jgjj .section .section_right {
+        width: 100%;
+    }
+}
