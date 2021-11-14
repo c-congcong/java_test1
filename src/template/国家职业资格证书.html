@@ -7,10 +7,11 @@
 </head>
 <body>
 <style>
-    #center{
+    #center {
         margin: 0 auto;
         text-align: center;
     }
+
     .form {
         background: url(http://zscx.osta.org.cn/img/zscx/formBg.png) no-repeat;
         width: 456px;
@@ -20,12 +21,43 @@
         *zoom: 1;
         vertical-align: top;
     }
-    input,p {margin:0; padding:0;}
-    input,select{vertical-align:middle;}
-    #search_box1{ /*width:552px; position:relative;*/padding-left: 37px;padding-top: 15px; color:#015293;font-size:14px; }
-    #search_box1 p{margin-bottom:4px; *margin-bottom:4px;font-weight:bold;}
-    #search_box1 p input{ height:26px; line-height:26px; width:299px; border:1px solid #A4D8EC;}
-    #search_box1 .exp{padding-left:75px; color:#808080;font-weight:normal;font-size:14px;line-height:25px;}
+
+    input, p {
+        margin: 0;
+        padding: 0;
+    }
+
+    input, select {
+        vertical-align: middle;
+    }
+
+    #search_box1 { /*width:552px; position:relative;*/
+        padding-left: 37px;
+        padding-top: 15px;
+        color: #015293;
+        font-size: 14px;
+    }
+
+    #search_box1 p {
+        margin-bottom: 4px;
+        *margin-bottom: 4px;
+        font-weight: bold;
+    }
+
+    #search_box1 p input {
+        height: 26px;
+        line-height: 26px;
+        width: 299px;
+        border: 1px solid #A4D8EC;
+    }
+
+    #search_box1 .exp {
+        padding-left: 75px;
+        color: #808080;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 25px;
+    }
 </style>
 <div id="center">
     <!--职业资格证书-->
@@ -57,130 +89,126 @@
         </div>
     </form>
 </div>
-    <sctipt>
-        <script type="text/javascript">
-            /*
-            验证表单，至少输入*个查询条件；
-            strFormId为表单Id，nMinValid为需要的条件个数；
-            在有效标签加入valid="valid"属性。
-            */
-            function checkFormValid(strFormId, nMinValid)
-            {
+<sctipt>
+    <script type="text/javascript">
+        /*
+        验证表单，至少输入*个查询条件；
+        strFormId为表单Id，nMinValid为需要的条件个数；
+        在有效标签加入valid="valid"属性。
+        */
+        function checkFormValid(strFormId, nMinValid) {
 
-                var objForm = document.getElementById(strFormId);
-                var arrayFormChilds = objForm.getElementsByTagName("input");
-                var nValid = 0;
-                var certID=document.getElementById('zsbh').value
+            var objForm = document.getElementById(strFormId);
+            var arrayFormChilds = objForm.getElementsByTagName("input");
+            var nValid = 0;
+            var certID = document.getElementById('zsbh').value
 
-                for (var n = 0; n < arrayFormChilds.length; n++){
-                    if (arrayFormChilds[n].getAttribute("valid")){
-                        if (arrayFormChilds[n].value.length > 0){
-                            nValid++;
-                        }
+            for (var n = 0; n < arrayFormChilds.length; n++) {
+                if (arrayFormChilds[n].getAttribute("valid")) {
+                    if (arrayFormChilds[n].value.length > 0) {
+                        nValid++;
                     }
                 }
-                if(!certID){
-                    window.alert("请填写证书编号！");
-                    return false;
-                }else if
-                (nValid < nMinValid){
-                    window.alert("请至少输入" + nMinValid + "个查询条件！");
-                    return false;
-                }
-//			var regex = /.*csrftoken=([^;.]*).*$/ ;
-//          var xCSRFToken = document.cookie.match(regex) === null ? null : document.cookie.match(regex)[1]
-//          document.getElementById("csrfmiddlewaretoken").value = xCSRFToken;
-//          return true;
-
             }
-            function checkFormValid1(strFormId, nMinValid)
-            {
-                var objForm = document.getElementById(strFormId);
-                var arrayFormChilds = objForm.getElementsByTagName("input");
-                var nValid = 0;
+            if (!certID) {
+                window.alert("请填写证书编号！");
+                return false;
+            } else if
+            (nValid < nMinValid) {
+                window.alert("请至少输入" + nMinValid + "个查询条件！");
+                return false;
+            }
+            var regex = /.*csrftoken=([^;.]*).*$/;
+            var xCSRFToken = document.cookie.match(regex) === null ? null : document.cookie.match(regex)[1]
+            document.getElementById("csrfmiddlewaretoken").value = xCSRFToken;
+            return true;
 
-                for (var n = 0; n < arrayFormChilds.length; n++)
-                {
-                    if (arrayFormChilds[n].getAttribute("valid"))
-                    {
-                        if (arrayFormChilds[n].value.length > 0)
-                        {
-                            nValid++;
-                        }
+        }
+
+        function checkFormValid1(strFormId, nMinValid) {
+            var objForm = document.getElementById(strFormId);
+            var arrayFormChilds = objForm.getElementsByTagName("input");
+            var nValid = 0;
+
+            for (var n = 0; n < arrayFormChilds.length; n++) {
+                if (arrayFormChilds[n].getAttribute("valid")) {
+                    if (arrayFormChilds[n].value.length > 0) {
+                        nValid++;
                     }
                 }
-
-                if (nValid < nMinValid)
-                {
-                    window.alert("请至少输入" + nMinValid + "个查询条件！");
-                    return false;
-                }
-            }
-            var intervalId = "";
-            var Change = 2;
-            function setTab(name,cursel,n,hreef){
-
-                for(i=1;i<=n;i++){
-                    var menu=document.getElementById(name+i);
-                    var con=document.getElementById("con_"+name+"_"+i);
-                    menu.className=i==cursel?hreef:"";
-                    con.style.display=i==cursel?"block":"none";
-                }
-
             }
 
-            function setTabChange(name,cursel,n,hreef){
-
-                for(i=1;i<=n;i++){
-                    var menu=document.getElementById(name+i);
-                    var con=document.getElementById("con_"+name+"_"+i);
-                    menu.className=i==cursel?hreef:"";
-                    con.style.display=i==cursel?"block":"none";
-                }
-                //clearInterval(intervalId);
-                //Change=cursel;
+            if (nValid < nMinValid) {
+                window.alert("请至少输入" + nMinValid + "个查询条件！");
+                return false;
             }
-            function setTabChange1(name,cursel,n,hreef){
-                for(i=1;i<=n;i++){
-                    var menu=document.getElementById(name+i);
-                    var con=document.getElementById(name+"_con_"+i);
-                    menu.className=i==cursel?hreef:"";
-                    con.style.display=i==cursel?"block":"none";
-                }
+        }
+
+        var intervalId = "";
+        var Change = 2;
+
+        function setTab(name, cursel, n, hreef) {
+
+            for (i = 1; i <= n; i++) {
+                var menu = document.getElementById(name + i);
+                var con = document.getElementById("con_" + name + "_" + i);
+                menu.className = i == cursel ? hreef : "";
+                con.style.display = i == cursel ? "block" : "none";
             }
 
-            function setTab_s(name,cursel,n){
-                for(i=1;i<=n;i++){
-                    var menu=document.getElementById(name+i);
-                    var con=document.getElementById("con_"+name+"_"+i);
-                    var mone=document.getElementById("con_"+name+"_mone_"+i);
-                    menu.className=i==cursel?"tit_qh tit_qh_dq":"tit_qh";
-                    con.style.display=i==cursel?"block":"none";
-                    mone.style.display=i==cursel?"block":"none";
-                }
+        }
 
+        function setTabChange(name, cursel, n, hreef) {
+
+            for (i = 1; i <= n; i++) {
+                var menu = document.getElementById(name + i);
+                var con = document.getElementById("con_" + name + "_" + i);
+                menu.className = i == cursel ? hreef : "";
+                con.style.display = i == cursel ? "block" : "none";
+            }
+            //clearInterval(intervalId);
+            //Change=cursel;
+        }
+
+        function setTabChange1(name, cursel, n, hreef) {
+            for (i = 1; i <= n; i++) {
+                var menu = document.getElementById(name + i);
+                var con = document.getElementById(name + "_con_" + i);
+                menu.className = i == cursel ? hreef : "";
+                con.style.display = i == cursel ? "block" : "none";
+            }
+        }
+
+        function setTab_s(name, cursel, n) {
+            for (i = 1; i <= n; i++) {
+                var menu = document.getElementById(name + i);
+                var con = document.getElementById("con_" + name + "_" + i);
+                var mone = document.getElementById("con_" + name + "_mone_" + i);
+                menu.className = i == cursel ? "tit_qh tit_qh_dq" : "tit_qh";
+                con.style.display = i == cursel ? "block" : "none";
+                mone.style.display = i == cursel ? "block" : "none";
             }
 
-            /*
-            function setgunDong(){
-                if(Change==4){
-                    Change=1;
-                }
-                setTab('area',Change,'3','cxsj_hreef_s');
-                Change++;
-                //alert(Change);
-                setIntervas();
-            }
-            function setIntervas(){
-                intervalId = setTimeout("setgunDong()",3000);
-            }
-            window.onload=function()
-            {
-                setIntervas();
-            }
-             */
-        </script>
-    </sctipt>
+        }
+
+        // function setgunDong(){
+        //     if(Change==4){
+        //         Change=1;
+        //     }
+        //     setTab('area',Change,'3','cxsj_hreef_s');
+        //     Change++;
+        //     //alert(Change);
+        //     setIntervas();
+        // }
+        // function setIntervas(){
+        //     intervalId = setTimeout("setgunDong()",3000);
+        // }
+        // window.onload=function()
+        // {
+        //     setIntervas();
+        // }
+    </script>
+</sctipt>
 </div>
 </body>
 </html>

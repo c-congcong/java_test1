@@ -1,0 +1,221 @@
+object:focus {
+    /*outline: none;*/
+}
+
+/* HTML Countdown
+*/
+
+.htmlCountdownBg {
+    position: relative;
+    width: 402px;
+    /*height: 293px;*/
+    height: 206px;
+
+    color: #fff;
+    font-family: 'OmegaCT-webfont', Arial, Helveltica, sans-serif;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.htmlCountdownBg div {
+    position: absolute;
+}
+
+/*.htmlCountdownBg.black {*/
+/*    background-image: url('https://mat1.gtimg.com/qqcdn/bj2022/countdown/img/bg_black.jpg');*/
+/*}*/
+
+/*.htmlCountdownBg.black-countdown {*/
+/*    background-image: url('https://mat1.gtimg.com/qqcdn/bj2022/countdown/img/bg_countdown_black.jpg');*/
+/*}*/
+
+.htmlCountdownBg.white {
+    background-image: url('../img/1.jpg');
+    color: #ffffff;
+}
+
+.htmlCountdownBg.white .cd-values {
+    color: #0032a0;
+}
+
+/*.htmlCountdownBg.white-countdown {*/
+/*    background-image: url('https://mat1.gtimg.com/qqcdn/bj2022/countdown/img/bg_countdown_white.png');*/
+/*}*/
+
+.htmlCountdownBg .cd-countdown,
+.htmlCountdownBg .cd-realtime {
+    display: none;
+    width: 100%;
+}
+
+/*.htmlCountdownBg .cd-logo {*/
+/*    width: 100%;*/
+/*    height: 50px;*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: 100%;*/
+/*    background-position: center;*/
+/*}*/
+
+/*.htmlCountdownBg.black .cd-logo {*/
+/*    background-image: url('https://mat1.gtimg.com/qqcdn/bj2022/countdown/img/logo_black.png');*/
+/*}*/
+
+/*.htmlCountdownBg.white .cd-logo {*/
+/*    background-image: url('https://mat1.gtimg.com/qqcdn/bj2022/countdown/img/logo_white.png');*/
+/*}*/
+
+/*countdown*/
+
+.htmlCountdownBg .cd-labels,
+.htmlCountdownBg .cd-values {
+    text-align: center;
+    left: 7px;
+    width: 388px;
+     /*height: 90px;*/
+}
+/*时分秒字的定位*/
+.htmlCountdownBg .cd-labels {
+    font-size: 24px;
+    top: 78px;
+}
+
+.htmlCountdownBg .cd-values {
+    font-size: 50px;
+    top: 103px;
+    font-weight: bold;
+}
+
+.htmlCountdownBg.black .cd-labels {
+    color: #c5c5c5;
+}
+
+.htmlCountdownBg.white .cd-labels {
+    color: #0032a0;
+}
+
+.htmlCountdownBg .dLabel,
+.htmlCountdownBg .dValue {
+    left: 0px;
+    width: 138px;
+}
+
+.htmlCountdownBg .hLabel,
+.htmlCountdownBg .hValue {
+    left: 139px;
+    width: 80px;
+}
+
+.htmlCountdownBg .mLabel,
+.htmlCountdownBg .mValue {
+    left: 219px;
+    width: 85px;
+}
+
+.htmlCountdownBg .sLabel,
+.htmlCountdownBg .sValue {
+    left: 305px;
+    width: 82px;
+}
+
+
+/*距离开幕样式*/
+.htmlCountdownBg .cd-copy,
+.htmlCountdownBg .cd-real-copy {
+    font-size: 26px;
+    width: 100%;
+    text-align: center;
+    line-height: 1.2em;
+    left: 0px;
+    top: 25px;
+}
+
+.htmlCountdownBg.white .cd-copy,
+.htmlCountdownBg.white .cd-real-copy {
+    color: #ffffff;
+}
+
+.cufonJa {
+    font-size: 20px !important;
+    line-height: 1.3em !important;
+
+}
+
+/*real*/
+
+.htmlCountdownBg .cd-real-values {
+    font-size: 76px;
+    top: 131px;
+    left: 7px;
+    width: 388px;
+    text-align: center;
+    color: #0032a0;
+    font-weight: bold;
+}
+
+.htmlCountdownBg .realhValue {
+    right: 283px;
+    width: 105px;
+}
+
+.htmlCountdownBg .separatorOne {
+    right: 256px;
+}
+
+.htmlCountdownBg .realmValue {
+    right: 141px;
+    width: 105px;
+}
+
+.htmlCountdownBg .separatorTwo {
+    right: 112px;
+}
+
+.htmlCountdownBg .realsValue {
+    right: 0px;
+    width: 105px;
+}
+
+
+/* ie6 png alpha lack */
+.nvda-omega {
+    width: 402px;
+    height: 134px;
+    left: 0px;
+    top: 0;
+}
+
+.nvda-timer {
+    width: 402px;
+    height: 89px;
+    top: 134px;
+    left: 0px;
+}
+
+.nvda-title {
+    width: 402px;
+    height: 70px;
+    top: 223px;
+    left: 0px;
+}
+
+.nvda-text {
+    position: absolute;
+    z-index: 99;
+    cursor: pointer;
+    display: block;
+    outline: none;
+}
+
+.nvda-text img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    border: none;
+}
+
+.nvda-realtime {
+    display: none;
+}
